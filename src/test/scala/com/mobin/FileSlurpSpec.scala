@@ -15,7 +15,7 @@ class FileSlurpSpec extends TestKit(ActorSystem("system")) with WordSpecLike wit
 
   override def afterAll() {
     new java.io.File("/tmp/test-file.txt").delete()
-    system.shutdown()
+    system.terminate()
   }
 
   "A FileSlurp" should {

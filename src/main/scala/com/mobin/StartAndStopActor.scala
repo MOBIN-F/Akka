@@ -11,7 +11,8 @@ object StartAndStopActor {
   def main(args: Array[String]) {
     val system = ActorSystem()
     val first = system.actorOf(Props[StartstopActor1], "first")
-    first ! "stop"
+    //first ! "stop"
+    first.tell("stop",null)
   }
 }
 

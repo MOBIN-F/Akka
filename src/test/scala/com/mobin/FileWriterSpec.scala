@@ -13,7 +13,7 @@ import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpecLike}
 import scala.io.Source
 
 class FileWriterSpec extends TestKit(ActorSystem("system")) with WordSpecLike with Matchers with ImplicitSender with BeforeAndAfterAll {
-  override def afterAll() = system.shutdown()
+  override def afterAll() = system.terminate()
 
   "A FileWriter" should {
     "write to a file in correct order" in {

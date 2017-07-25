@@ -16,7 +16,7 @@ object IotApp {
       //val supervisor = system.actorOf(Props(new IotSupervisor), "iotsupervis-actor")
       StdIn.readLine()
     } finally {
-      system.terminate()
+     // system.terminate()
     }
 
   }

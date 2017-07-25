@@ -13,7 +13,7 @@ import org.scalatest._
 
 class FileHandlerSpec extends TestKit(ActorSystem("system")) with WordSpecLike with Matchers with ImplicitSender with BeforeAndAfterAll {
 
-  override def afterAll() = system.shutdown()
+  override def afterAll() = system.terminate()
 
   "A FileHandler" should {
     "be able to write to a file" in new TestSetup {

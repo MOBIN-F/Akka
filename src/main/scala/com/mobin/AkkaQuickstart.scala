@@ -3,6 +3,8 @@ package com.mobin
 
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props}
 
+import scala.io.StdIn
+
 //#greeter-companion
 //#greeter-messages
 object Greeter {

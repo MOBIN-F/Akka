@@ -4,7 +4,7 @@ import com.typesafe.config.Config
 import java.util.concurrent._
 import akka.dispatch.{MonitorableThreadFactory, ThreadPoolConfig}
 
-private [io] class ThreadPoolConfigurator(config: Config) {
+private [AkkaIO] class ThreadPoolConfigurator(config: Config) {
   val pool: ExecutorService = config.getString("type") match {
     case "fork-join-executor" => createForkJoinExecutor(config.getConfig("fork-join-executor"))
 
