@@ -10,7 +10,7 @@ import scala.collection.mutable.HashMap
   */
 case class SetRequest(key: String, value: Object)
 case class GetRequest(key: String)
-case class KeyNotFoundException(key: String) extends Exception   //定义异常类
+case class KeyNotFoundException(key: String) extends Exception
 
 class AkkademyDb extends Actor{
   val map = new HashMap[String, Object]
@@ -33,7 +33,7 @@ class AkkademyDb extends Actor{
     case o => Status.Failure(new ClassNotFoundException)
   }
 
-}
+}\
 object Main extends App{
   val system = ActorSystem("akkademy")
   system.actorOf(Props[AkkademyDb], "akkademy-db")
