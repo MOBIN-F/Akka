@@ -33,7 +33,7 @@ class AkkademyDb extends Actor{
     case o => Status.Failure(new ClassNotFoundException)
   }
 
-}\
+}
 object Main extends App{
   val system = ActorSystem("akkademy")
   system.actorOf(Props[AkkademyDb], "akkademy-db")
