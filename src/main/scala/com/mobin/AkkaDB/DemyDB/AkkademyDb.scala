@@ -1,6 +1,6 @@
-package com.mobin.AkkaDB
+package com.mobin.AkkaDB.DemyDB
 
-import akka.actor.{Props, ActorSystem, Status, Actor}
+import akka.actor.{Actor, ActorSystem, Props, Status}
 import akka.event.Logging
 
 import scala.collection.mutable.HashMap
